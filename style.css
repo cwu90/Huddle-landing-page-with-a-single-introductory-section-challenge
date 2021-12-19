@@ -1,0 +1,176 @@
+:root {
+  --clr-primary-violet: hsl(257, 40%, 49%);
+  --clr-primary-magenta: hsl(300, 69%, 71%);
+  --ff-primary: 'Poppins', sans-serif;
+
+  --fw--400: 400;
+  --fw--600: 600;
+
+  --fs-400: ;
+  --fs-600: ;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-primary-violet);
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat, repeat;
+  background-size: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p {
+  color: white;
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding-block: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.flex {
+  max-width: 95%;
+  margin: auto;
+}
+
+.logo {
+  max-width: 40%;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.graphic {
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.illustration {
+  margin-left: 1.5rem;
+}
+
+img {
+  max-width: 85%;
+}
+
+.description {
+  text-align: center;
+  padding-inline: 1.5rem;
+}
+
+.fab {
+  color: white;
+}
+
+.social {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+a.button {
+  display: inline-block;
+  padding: 0.8em 5em;
+  margin: 2em 0.3em 0.3em 0;
+  margin-bottom: 3rem;
+  border-radius: 2em;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--clr-primary-violet);
+  background-color: white;
+  text-align: center;
+  transition: all 0.2s;
+  box-shadow: 3px 3px 3px hsl(257, 40%, 37%);
+}
+a.button:hover {
+  background-color: var(--clr-primary-magenta);
+  color: white;
+}
+
+@media (min-width: 43.75em) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-size: cover;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+  .graphic {
+    width: 60%;
+  }
+  .description {
+    width: 40%;
+  }
+
+  .logo {
+    max-width: 30%;
+    padding-bottom: 5rem;
+  }
+
+  .main-illustration {
+    margin: auto;
+  }
+  .main-illustration img {
+    width: 110%;
+  }
+
+  .description {
+    text-align: left;
+    padding: 0;
+    margin-top: 18rem;
+    max-width: 35%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .social {
+    margin-left: 24rem;
+    padding-top: 5rem;
+  }
+  a.button {
+    padding: 1em 4em;
+    border-radius: 3em;
+    font-size: 1rem;
+  }
+}
